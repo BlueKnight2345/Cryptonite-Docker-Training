@@ -60,9 +60,15 @@ Environment variables can be useful to change app functionality for different pu
 
 Now we move on to the netcat shell
 
-We create a non root user with `RUN useradd -ms /bin/bash user` giving it a home directory and letting it use bash
+<!-- We create a non root user with `RUN useradd -ms /bin/bash user` giving it a home directory and letting it use bash
 
 We then install updates as well as netcat and bash
 
 We then create a writeable directory and give access to the user and finally listen on port 9001 and switch to user when someone connects.
+ -->
 
+Ok this part gave me a lot of trouble, had to gpt my way through a lot of this, but got several errors with netcat.
+
+faced issues such as it instantly shutting down the container before it could connect, spamming error messages and unable to connect all together.
+
+ended up ditching netcat in the docker image and using socat instead, need to take some more time to understand this properly.
