@@ -58,3 +58,11 @@ def index():
 ```
 Environment variables can be useful to change app functionality for different purposes based on the environment variable set such as a mode which displays logs for debugging.
 
+Now we move on to the netcat shell
+
+We create a non root user with `RUN useradd -ms /bin/bash user` giving it a home directory and letting it use bash
+
+We then install updates as well as netcat and bash
+
+We then create a writeable directory and give access to the user and finally listen on port 9001 and switch to user when someone connects.
+
