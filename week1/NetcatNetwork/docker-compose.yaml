@@ -1,0 +1,23 @@
+services:
+  nc-server:
+    build: ./nc-server
+    container_name: nc-server
+    networks:
+      netcat_net:
+        ipv4_address: 172.28.1.10
+    tty: true
+
+  nc-client:
+    build: ./nc-client
+    container_name: nc-client
+    networks:
+      netcat_net:
+        ipv4_address: 172.28.1.11
+    tty: true
+
+networks:
+  netcat_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.0.0/16
