@@ -1,3 +1,1 @@
 ﻿# Cryptonite-Docker-Training
-
-<img width="1920" height="1080" alt="Screenshot (8)" src="https://github.com/user-attachments/assets/7e30cb5d-39ee-415c-92e7-02d384bb35ed" />
